@@ -1,46 +1,32 @@
-# Getting Started with Create React App
+# Assignment2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Refactoring process
 
-## Available Scripts
+- Split the code into smaller, more manageable modules based on functionality (e.g., cardano.ts, tron.ts, api.ts). This separation of concerns improves clarity and makes it easier to work on specific parts of the swap process independently.
 
-In the project directory, you can run:
+- Created a custom useSwap hook to encapsulate the core swap logic and state. This promotes reusability, as the hook can be easily imported and used in other components.
 
-### `npm start`
+- Introduced a useHandleApiError hook to centralize error handling logic. This simplifies the error handling process and makes it more consistent across different parts of the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Created a getApiUrl function in api.ts to dynamically generate API URLs based on configuration. This improves flexibility and avoids hardcoded URLs.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Reasons behind these changes:
 
-### `npm test`
+- The code is now more modular, making it easier to understand the individual steps involved in the swap process.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Changes or fixes can be made to specific parts of the code without affecting unrelated functionality.
+  pen_spark
 
-### `npm run build`
+- The custom hooks can be used in other components, reducing code duplication.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- The smaller modules are easier to test independently, leading to more reliable code.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Introducing TypeScript improves code quality by catching errors during development.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Refactoring Experience
 
-### `npm run eject`
+- The official React documentation is a great reference for best practices and patterns.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- TypeScript's documentation is essential for understanding types and how to use them effectively.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Several articles and tutorials on refactoring techniques were helpful for generating ideas and approaches.
